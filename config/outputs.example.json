@@ -1,0 +1,16 @@
+{
+  "outputs": [
+    {
+      "name": "console",
+      "type": "console",
+      "enabled": true
+    },
+    {
+      "name": "webhook",
+      "type": "webhook",
+      "enabled": false,
+      "url": "https://example.com/your-output-webhook"
+    }
+  ]
+}
+
