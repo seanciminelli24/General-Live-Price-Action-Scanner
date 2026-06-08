@@ -1,0 +1,23 @@
+{
+  "watchlists": [
+    {
+      "name": "Index Futures",
+      "enabled": true,
+      "symbols": ["MNQ", "MES"],
+      "timeframes": ["1m", "5m", "15m", "1h", "4h", "1d"],
+      "sessions": ["09:30-16:00 America/New_York"],
+      "requireSymbolSync": false,
+      "strategies": ["noop"]
+    },
+    {
+      "name": "Crypto Majors",
+      "enabled": false,
+      "symbols": ["BTCUSD", "ETHUSD"],
+      "timeframes": ["1m", "5m", "1h", "1d"],
+      "sessions": ["24x7"],
+      "requireSymbolSync": false,
+      "strategies": ["noop"]
+    }
+  ]
+}
+
