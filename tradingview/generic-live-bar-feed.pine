@@ -1,0 +1,28 @@
+//@version=6
+indicator("Generic Live Bar Feed", overlay=false)
+
+enabled = input.bool(true, "Enable live bar feed")
+secret = input.string("replace-with-your-webhook-secret", "Webhook Secret")
+timeframeLabel = input.string("1m", "Timeframe Label")
+
+canAlert = enabled and barstate.isconfirmed
+
+string message = "{"
+message := message + "\"secret\":\"" + secret + "\","
+message := message + "\"confirmed\":true,"
+message := message + "\"source\":\"tradingview\","
+message := message + "\"instrument\":\"" + syminfo.ticker + "\","
+message := message + "\"timeframe\":\"" + timeframeLabel + "\","
+message := message + "\"timestamp\":\"" + str.format_time(time, "yyyy-MM-dd HH:mm:ss") + "\","
+message := message + "\"open\":" + str.tostring(open) + ","
+message := message + "\"high\":" + str.tostring(high) + ","
+message := message + "\"low\":" + str.tostring(low) + ","
+message := message + "\"close\":" + str.tostring(close) + ","
+message := message + "\"volume\":" + str.tostring(volume)
+message := message + "}"
+
+plot(canAlert ? close : na, title="Confirmed bar close")
+
+if canAlert
+    alert(message, alert.freq_once_per_bar_close)
+
