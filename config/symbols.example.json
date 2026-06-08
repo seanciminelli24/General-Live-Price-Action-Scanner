@@ -1,0 +1,27 @@
+{
+  "symbols": {
+    "MNQ": {
+      "name": "Micro E-mini Nasdaq-100",
+      "assetClass": "futures",
+      "exchange": "CME",
+      "tickSize": 0.25,
+      "pointValue": 2,
+      "sessionTemplate": "cme-index-futures"
+    },
+    "BTCUSD": {
+      "name": "Bitcoin / US Dollar",
+      "assetClass": "crypto",
+      "exchange": "generic",
+      "tickSize": 0.01,
+      "pointValue": 1,
+      "sessionTemplate": "24x7"
+    }
+  },
+  "aliases": {
+    "MNQ1!": "MNQ",
+    "MES1!": "MES",
+    "ES1!": "ES",
+    "NQ1!": "NQ"
+  }
+}
+
