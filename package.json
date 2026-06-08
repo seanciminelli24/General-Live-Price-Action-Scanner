@@ -1,0 +1,22 @@
+{
+  "name": "general-live-scanner",
+  "version": "0.1.0",
+  "description": "Generic multi-symbol live candle scanner for price-action workflows.",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "tradingview",
+    "webhook",
+    "candles",
+    "ohlcv",
+    "scanner",
+    "price-action"
+  ],
+  "license": "MIT"
+}
+
