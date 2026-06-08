@@ -1,0 +1,23 @@
+{
+  "scanner": {
+    "enabled": true,
+    "mode": "SCAN_ONLY",
+    "requireConfirmedBars": true,
+    "baseTimeframe": "1m",
+    "retention": {
+      "1m": "60 minutes",
+      "5m": "2 days",
+      "15m": "7 days",
+      "1h": "30 days",
+      "4h": "180 days",
+      "1d": "730 days",
+      "1w": "unlimited"
+    }
+  },
+  "data": {
+    "storage": "local-jsonl",
+    "downloadOnStartup": false,
+    "preloadHistorical": false
+  }
+}
+
